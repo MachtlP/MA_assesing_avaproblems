@@ -2,86 +2,107 @@
 
 The following subsections provide a sufficient overview on the numerical model and analysis tools used for the presented work to allow a conclusive interpretation of the results thereafter.
 
-\section{CORAL temperature measurements} 
-\label{sec:coral}
+\section{Region-Clustering} 
+\label{sec:region_clustering}
 
-\textcite{kaifler_compact_2021} provide a more extensive summary on CORAL's setup and observation,
+\subsection{Regions \& Micro Regions}
 
+Modern regional avalnche hazard assesment is based on several small \textit{micro-regiosn}, 
+which are grouped during the process of the assesment in order to represent larger regions with similar conditions.
+The pre-selections and definitions of those \textit{micro-regiosn} is crucial for a consitent assesment and
+communication. The so called \textit{EUREGIO}, in especially the provinces of Tirol, South Tyrol and Trentino are 
+currently divied into 37 sup-regions. A single forecasting region covers at least a area of 10x10 km.
+The boundaries of these regions are typically along significant terrain signauters as mountain ridges or rivers.
+The initial state of the \textit{micro-regiosn} are based on expert knowledge and where further adaped on 
+expert feedback and further more on statitical analysis of meteorological data (Fig.: \ref{fig:EAWS_regions}).
 
-\section{(ERA5 reanalysis data)}
-
-% eventually comment on observational filter of satellite measurments from with figure from Hindley
-
-
-
-\section{Spectral filtering}
-% FFT
-
-refer to filtering described in Kruse paper and from Vera
-but mention equations
-
-Gaussian filter vs. butterworth filter
-
-and describe butterworth filter for CORAL data
-
-\section{Wavelet Analysis}
-
-The wavelet analysis described by \textcite{torrence_practical_1998} is used for deriving horizontal and vertical wavelengths of GWs in the idealized numerical simulations. 
-
-
-
-
-
-\begin{equation}
-    \mathcal{F}_x =  \rho_0 \int_{-\infty}^{\infty} (u'\omega' + f v' \eta') dx + f \int_{-\infty}^{\infty} \rho' v' \eta' dx
-    \label{equ:morlet}
-\end{equation}
-
-The normalization with the variance of the data $\sigma^2$ gives a measure of the power relative to white noise. 
-
-Then there is red noise too.
-
-
-\begin{figure*}[tbp]
+\begin{figure*}[h]
     \centering
-    \includegraphics[width=0.99\textwidth]{figures_methods/waveletAna_power_spectrum.png}
-    \caption{}
-    \label{fig:wavelet_example}
+    \includegraphics[width=0.5\textwidth]{Figures/figures_methods/micro_regions_EAWS.png}
+    \caption{Outerlines of the EUREGIO micro-regions}
+    \label{fig:EAWS_regions}
 \end{figure*}
 
+% ==== SNOWGRID ===============================================================
+\subsection{SNOWGRID}
+The \textit{SNOWGRID} model of the ZAMG ( Zentral Anstalft für Meteorologie und Geodynamik)
+ is a combination of the nocasting-system INCA and radiation model \textit{STRAHLGRID}. INCA delivers forecasts for
+ temperature, precipitation, wind and clouds. INCA has a spatial resolution of 1x1km further more with a topogrphical
+ downscaling of 100x100m. \textit{SNOWGRID} calculates on the basis auf INCA solid precipitation
+ and analyses changes from the past 3 days. Furthermore \textit{SNOWGRID} takes the heat content and the settling of 
+ the snowpack and the sinking effect of snowline in valleys into account. It delivers the information of the total
+ snowhight in a spatial resolution of 100x100m in 15 min interval.(Fig.: \ref{fig:snowgrid})
 
-% Mithilfe der Wavelet-Transformation können aus einer Datenreihe nicht nur die auftre- tenden Frequenzen extrahiert werden, sondern auch Informationen darüber, in welchen Abschnitten der Datenreihe welche Frequenzen dominant sind. Als Basisfunktionen wer- den dabei räumlich lokalisierte Wellen, sogenannte Wavelets, verwendet.
+ \begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/figures_methods/snowgrid.jpg}
+    \caption{Total snowhight of the SNOWGRID model for the 1st March 2021 06:00:00 MEZ}
+    \label{fig:snowgrid}
+\end{figure*}
 
-% Folgenden wird die Wavelet-Analyse anhand einer Datenreihe f(z) erläutert, die ent- lang einer räumlichen Achse z variiert. Dabei wird auf die Beschreibung in Torrence & Compo (1998) zurück gegriffen. Die Autoren stellen auf der Website http://atoc.colorado.edu/research/wavelets/ Software zur Anwendung der Wavelet-Ana- lyse zur Verfügung, die in dieser Arbeit verwendet wurde.
-% Hier wurde das Morlet-Wavelet ψ0(η) benutzt, das von einem dimensionslosen Ortspa- rameter η abhängt und als
-% ψ0(η) = π−1/4 ei ω0η e−η2/2 (3.39)
-% definiert ist. Real- und Imaginärteil von ψ0 sind in Abbildung 3.6a dargestellt. Wird f(z) als eine Datenreihe fj diskretisiert, die bei konstanter Intervallgröße ∆z auf einem Gitter mit Index j = 0,...,N−1 definiert ist, kann daraus die kontinuierliche Wavelet- Transformation Wn(s) ermittelt werden. Diese ist definiert als Faltung von fj mit einer skalierten und verschobenen Version der Wavelet-Funktion:
-% N−1 Wj(s) = �� fj′ ψ∗
-% ��(j′ −j)∆z�� s
-% (3.40) die komplex konjugierte normierte Wavelet-Funktion ψ0.
-%  Hierbei ist ψ
-% ∗
-% ���� ∆z ��1/2 ��∗ = s ψ0
-% j′=0
-%  Indem die Wavelet-Skala s variiert und ψ∗ entlang des Ortsindex j verschoben wird, kann ein Bild rekonstruiert werden, das sowohl die Amplitude einzelner Merkmale des Signals zeigt als auch die Variation der Amplitude mit dem Ort.
-% Für jede Skala s muss Gleichung (3.40) N-mal angewandt werden, damit die kontinu- ierliche Wavelet-Transformation approximiert wird. Diese Berechnung erfolgt deutlich schneller im Fourier-Raum, wo die Wavelet-Transformation gleichzeitig für alle N durch- geführt werden kann. Für die Skalen s empfiehlt sich eine Wahl von M Skalen, die als Vielfache von 2 ausgedrückt werden:
-% sm = s0 2m∆m mit m = 0,1,...,M und M = ∆m−1 log2(N ∆m/s0)
-% Die kleinste Skala s0 sollte dabei so gewählt werden, dass die entsprechende Fourier-
-% Periode etwa 2∆z beträgt. Aus der komplexen Wavelet-Transformierten Wj(s) kann
-% das reelle Wavelet-Leistungsspektrum |Wj(s)| berechnet werden. Bei der Interpretation
-% dieses Spektrums muss beachtet werden, dass bei der Fourier-Transformation eine An-
-% nahme bezüglich zyklischer Daten gemacht wird, die nicht unbedingt erfüllt ist. An den
-% Rändern des Datensatzes können deshalb Fehler auftreten. Der Einflusskegel (engl.: cone
-% of influence) gibt an, in welchen Bereichen des Spektrums Randeffekte wichtig werden.
-% Er ist definiert als e-Abklingzeit τs der Wavelet-Leistung zu jeder Skala s und für das √
-% Morlet-Wavelet gilt τs = 2 s.
-% Im rechten Bildteil von Abbildung 3.6c ist ein Wavelet-Leistungsspektrum dargestellt, in dem auch der Einflusskegel als weiße Linie markiert ist. Die schwarze Kontur gibt ein Konfidenzniveau von 95 % an, bezogen auf ein Spektrum roten Rauschens mit lag-
+\noindent In order to validate the Regions relevant for avalanche warning service EUREGIO only the wintermonths from Oct till March 
+over the periods of the past 10 years (November 2011 till March 2021) comes into account. In the scope of a saveing computing 
+power the spatial resolution of 100x100m is reduced to 1x1km by taking the median within this spector. 
+Based on the 06:00:00MEZ datastamp a 24h surface hight change will be calulated.
 
-% 1-Koeffizient 0.72 (siehe Torrence & Compo, 1998). Es zeigt die Wavelet-Analyse ei- nes Profils des Vertikalwinds (mittlerer Bildteil von Abbildung 3.6c) aus einer EU- LAG-Simulation. Der Vertikalschnitt durch das Windfeld ist in Abbildung 3.6b als rot-gestrichelte Linie dargestellt. Im Wavelet-Leistungsspektrum, das mit dem Morlet- Wavelet (Abbildung 3.6a) erstellt wurde, können einzelne Bereiche als dominante Signale ausgemacht werden. Im unteren Bereich bis zu einer Höhe von z = 10 km ist eine ver- tikale Wellenlänge λz zwischen etwa 2 000 m und 3 000 m verstärkt vorhanden, während in größeren Höhen kleinere Wellenlängen von unter 1000m das Spektrum bestimmen. Dieser Fall ist in Abschnitt 4.2.1 ausführlich besprochen.
+% ==== Cost733cat ===============================================================
+
+\subsection{Cost733cat - Weather and circulation type classification}
+
+The Cost733cat is a databease of weather and circulation type classfication covering a spatial domain over Europe with 
+12 sup domains of the ZAMG. The inputdata comes from ERA40-reanalysis dataset provided by the Eruopian Center of Medium-Range
+Weather forecast by \textcite{philippCost733catDatabaseWeather2010}. The domain of intresst of this research is D06 covering
+the alps. 
+
+\noindent The Cost733cat contains informations about the main wind direction, cyclonisity and humidity on different pressure levels
+weighted to the center of the domain. For these research only the information about the main flow at 700 hPa is of intresst.
+The main flow is devided into 9 windsectors, 4 main wind sectors, 4 side wind sectors and one additional class for changing 
+wind regimes within a day. For further statistical analyis it has to be taken into account that main sectors has a coverage of
+30 $^{\circ}$ and side sectors 60 $^{\circ}$:
+\\
+
+\begin{minipage}{.5\linewidth}
+    \begin{itemize}
+        \item 345$^{\circ}$ -   15$^{\circ}$  \dots   N
+        \item 15$^{\circ}$  -   75$^{\circ}$    \dots NE
+        \item 75$^{\circ}$  -   105$^{\circ}$    \dots E
+        \item 105$^{\circ}$  -   165$^{\circ}$    \dots SE
+        \item 165$^{\circ}$  -   195$^{\circ}$    \dots S
+        \item 195$^{\circ}$  -   255$^{\circ}$    \dots SW
+        \item 255$^{\circ}$  -   285$^{\circ}$    \dots W
+        \item 285$^{\circ}$  -   345$^{\circ}$    \dots W
+    \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/figures_methods/windesctors.png}
+    \captionof{figure}{Windsectors of the Cost733cat \textcite{krennertWetterlagenklassifikationenZAMGAnfangen}}
+    \end{minipage}
+
+% ==== Clustering ===============================================================
+
+\subsection{Clustering}
 
 
-% include figure from wavelet analysis for one line in 2D data, show line in T' plot..
+% ==== Assesing Avlanche Problems ===============================================================
+\subsection{Assesing Avlanche Problems}
 
-% Figure: wavelet + cut + power spectrum 
 
-spectral resolution was 
+% ==== SNOWPACK ===============================================================
+\subsection{SNOWPACK}
+
+
+% ==== Avalanche Problems ===============================================================
+\subsection{Avalanche Problems}
+
+
+% ==== Avalnche Problem Algorithm ===============================================================
+\subsection{Avalnche Problem Algorithm}
+
+ %\begin{figure*}[tbp]
+%     \centering
+%     \includegraphics[width=0.99\textwidth]{figures_methods/waveletAna_power_spectrum.png}
+%     \caption{}
+%     \label{fig:wavelet_example}
+% \end{figure*}

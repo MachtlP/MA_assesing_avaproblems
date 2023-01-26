@@ -1,39 +1,22 @@
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{Preface}{iii}{chapter*.1}%
-\contentsline {chapter}{Contents}{v}{Doc-Start}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Atmospheric GWs and their representation in general circulation models}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}The gravity wave belt around 60°S and the cold pole problem}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}The excitation of GWs above tropopause depressions}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}The propagation of GWs above tropopause depressions}{6}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Research goals and outline}{7}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Methods and data}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}CORAL temperature measurements}{13}{section.2.1}%
-\contentsline {section}{\numberline {2.2}(ERA5 reanalysis data)}{13}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Spectral filtering}{13}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Wavelet Analysis}{13}{section.2.4}%
-\contentsline {chapter}{\numberline {3}The numerical model EULAG}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}General setup}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Ambient profiles of idealized simulations}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Transient lower boundary of idealized simulations}{20}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Non-linear simulations of MW regimes with linear analytic solutions}{21}{section.3.4}%
-\contentsline {chapter}{\numberline {4}NOGWs excited by tropopause depressions in a 2D plane}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Quasi-3D reference Simulation}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Influence of tropopause shape}{27}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Influence of background zonal wind}{27}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Influence of Coriolis force and stratification}{30}{section.4.4}%
-\contentsline {section}{\numberline {4.5}The influence of the fold's propagation speed}{30}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Summary and answer to research question (R1)}{31}{section.4.6}%
-\contentsline {chapter}{\numberline {5}NOGWs excited by tropopause depressions in 3D}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Rotating the major axis of the tropopause depression}{33}{section.5.1}%
-\contentsline {section}{\numberline {5.2}The influence of meridional shear}{33}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Momentum flux calculation from an observational perspective}{38}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Summary and answer to research question (1) and (3)}{42}{section.5.4}%
-\contentsline {chapter}{\numberline {6}NOGWs from propagating tropopause folds in ground-based Lidar observations}{29}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Lidar observations in idealized numerical simulations}{30}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Signatures of NOGWs from propagating tropopause folds in CORAL measurements}{33}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Summary and answer to research question (R3)}{39}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Conclusion}{37}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Outlook}{39}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Large Quantities of Data}{41}{appendix.A}%
-\contentsline {chapter}{Acknowledgments}{51}{appendix*.18}%
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\contentsline {chapter}{Preface}{iii}{chapter*.1}% 
+\contentsline {chapter}{Contents}{v}{chapter*.1}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Micro Regions}{1}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Avalanche Problems}{1}{section.1.2}% 
+\contentsline {chapter}{\numberline {2}Methods and data}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Region-Clustering}{3}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Regions \& Micro Regions}{3}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}SNOWGRID}{3}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Cost733cat - Weather and circulation type classification}{5}{subsection.2.1.3}% 
+\contentsline {subsection}{\numberline {2.1.4}Clustering}{5}{subsection.2.1.4}% 
+\contentsline {subsection}{\numberline {2.1.5}Assesing Avlanche Problems}{5}{subsection.2.1.5}% 
+\contentsline {subsection}{\numberline {2.1.6}SNOWPACK}{5}{subsection.2.1.6}% 
+\contentsline {subsection}{\numberline {2.1.7}Avalanche Problems}{5}{subsection.2.1.7}% 
+\contentsline {subsection}{\numberline {2.1.8}Avalnche Problem Algorithm}{5}{subsection.2.1.8}% 
+\contentsline {chapter}{\numberline {3}SNOWGRID Clustering}{7}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Conclusion}{9}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Outlook}{11}{chapter.5}% 
+\contentsline {chapter}{\numberline {A}Large Quantities of Data}{13}{appendix.A}% 
+\contentsline {chapter}{Acknowledgments}{15}{appendix*.5}% 
