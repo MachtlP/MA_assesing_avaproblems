@@ -2145,9 +2145,22 @@
     <bcf:datasource type="file" datatype="bibtex">refs.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">philippCost733catDatabaseWeather2010</bcf:citekey>
-    <bcf:citekey order="2">krennertWetterlagenklassifikationenZAMGAnfangen</bcf:citekey>
-    <bcf:citekey order="3">krennertWetterlagenklassifikationenZAMGAnfangen</bcf:citekey>
+    <bcf:citekey order="1">lehningSnowpackModelCalculations1999</bcf:citekey>
+    <bcf:citekey order="2">perez-guillenDatadrivenAutomatedPredictions2022</bcf:citekey>
+    <bcf:citekey order="3">herlaDataExplorationTool2022</bcf:citekey>
+    <bcf:citekey order="4">eawsTypicalAvalancheProblems2017</bcf:citekey>
+    <bcf:citekey order="5">reuterCharacterizingSnowInstability2022</bcf:citekey>
+    <bcf:citekey order="6">philippCost733catDatabaseWeather2010</bcf:citekey>
+    <bcf:citekey order="7">krennertWetterlagenklassifikationenZAMGAnfangen</bcf:citekey>
+    <bcf:citekey order="8">krennertWetterlagenklassifikationenZAMGAnfangen</bcf:citekey>
+    <bcf:citekey order="9">mittererAusbildungshandbuchTirolerLawinenkommissionen2022</bcf:citekey>
+    <bcf:citekey order="10">mittererAusbildungshandbuchTirolerLawinenkommissionen2022</bcf:citekey>
+    <bcf:citekey order="11">mittererAusbildungshandbuchTirolerLawinenkommissionen2022</bcf:citekey>
+    <bcf:citekey order="12">mittererOperationalSupportingTool2013</bcf:citekey>
+    <bcf:citekey order="13">mittererOperationalSupportingTool2013</bcf:citekey>
+    <bcf:citekey order="14">conwaySnowStabilityRain1993</bcf:citekey>
+    <bcf:citekey order="15">mittererOperationalSupportingTool2013</bcf:citekey>
+    <bcf:citekey order="16">conwaySnowStabilityRain1993</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

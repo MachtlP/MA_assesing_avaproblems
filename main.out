@@ -1,20 +1,35 @@
 \BOOKMARK [0][-]{chapter*.1}{Preface}{}% 1
 \BOOKMARK [0][-]{chapter*.1}{Contents}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Micro Regions}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Avalanche Problems}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Methods and data}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Region-Clustering}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.1.1}{Regions \046 Micro Regions}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.2}{SNOWGRID}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.3}{Cost733cat - Weather and circulation type classification}{section.2.1}% 10
-\BOOKMARK [2][-]{subsection.2.1.4}{Clustering}{section.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.1.5}{Assesing Avlanche Problems}{section.2.1}% 12
-\BOOKMARK [2][-]{subsection.2.1.6}{SNOWPACK}{section.2.1}% 13
-\BOOKMARK [2][-]{subsection.2.1.7}{Avalanche Problems}{section.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.1.8}{Avalnche Problem Algorithm}{section.2.1}% 15
-\BOOKMARK [0][-]{chapter.3}{SNOWGRID Clustering}{}% 16
-\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 17
-\BOOKMARK [0][-]{chapter.5}{Outlook}{}% 18
-\BOOKMARK [0][-]{appendix.A}{Large Quantities of Data}{}% 19
-\BOOKMARK [0][-]{appendix*.5}{Acknowledgments}{}% 20
+\BOOKMARK [1][-]{section.1.1}{Clustering}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Assessing avalanche problems - Model chains}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.2.1}{AWS-model chain - Now-cast}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{Observed Profiles and NWPs - Forecast }{section.1.2}% 7
+\BOOKMARK [0][-]{chapter.2}{Methods and data}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Region-Clustering}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{Regions \046 Micro Regions}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{SNOWGRID}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.3}{Cost733cat - Weather and circulation type classification}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.4}{Clustering}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{Avalanche classification}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{Avalanche types}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.2}{Avalanche Problems}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Avalanche Problem Algorithm}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.3.1}{Concept}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.2}{New Snow}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{Wind slab}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.4}{Persistent Weak layer}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.5}{Wet Snow Problem}{section.2.3}% 22
+\BOOKMARK [2][-]{subsection.2.3.6}{Gliding Snow Problem}{section.2.3}% 23
+\BOOKMARK [1][-]{section.2.4}{SNOWPACK- model-chains}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.4.1}{AWS}{section.2.4}% 25
+\BOOKMARK [2][-]{subsection.2.4.2}{Observed profiles}{section.2.4}% 26
+\BOOKMARK [0][-]{chapter.3}{SNOWGRID Clustering}{}% 27
+\BOOKMARK [0][-]{chapter.4}{Assesing Avalanche problems }{}% 28
+\BOOKMARK [1][-]{section.4.1}{Case Study}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.1.1}{Overview Winterseason 2021/22}{section.4.1}% 30
+\BOOKMARK [1][-]{section.4.2}{ vrgl stations nord /south hauptkamm}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 32
+\BOOKMARK [0][-]{chapter.6}{Outlook}{}% 33
+\BOOKMARK [0][-]{appendix.A}{Large Quantities of Data}{}% 34
+\BOOKMARK [0][-]{appendix*.18}{Acknowledgments}{}% 35

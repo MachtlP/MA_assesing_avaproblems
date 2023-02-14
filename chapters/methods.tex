@@ -18,7 +18,7 @@ expert feedback and further more on statitical analysis of meteorological data (
 
 \begin{figure*}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{Figures/figures_methods/micro_regions_EAWS.png}
+    \includegraphics[width=0.5\textwidth]{Figures/figures_methods/Microregion.png}
     \caption{Outerlines of the EUREGIO micro-regions}
     \label{fig:EAWS_regions}
 \end{figure*}
@@ -83,26 +83,181 @@ wind regimes within a day. For further statistical analyis it has to be taken in
 % ==== Clustering ===============================================================
 
 \subsection{Clustering}
-
+- kmeans
+- reshaping 3D into 1D
+- all wind regimes
+-north blocking
+- number of clusters
 
 % ==== Assesing Avlanche Problems ===============================================================
-\subsection{Assesing Avlanche Problems}
+\section{Avalanche classification} 
+
+\subsection{Avalanche types}
+
+Avalanches are as versatile as snow crystals and therefore different types can be determinded based on different critireas
+as triggering mechanism, humidity, flow. The most prominant avlanche type critical for snow recrationist are slab avalanches
 
 
-% ==== SNOWPACK ===============================================================
-\subsection{SNOWPACK}
+-Auslöse mechanismus
+- Lage der Gleitfläche
+-feuchtigkeit
+-from-bewegund
 
+- dry / wet
+-slab - loose - gliding - wet snow
+
+- release mechanism
+
+- Lawinen --> Brett SCHW ininitianin
+
+
+
+\subsection{Avalanche Problems}
+
+Due to similar weather phenoms in winters similar snow conditions devlop. The Europian avlanche warning services (EAWS)
+agreed in 2018 on five typical avalanche problems describing significant condintions avalanche forcasters and winter sport
+enthusiast meet in the back country. They should help in their assessment of the avalanche hazard. Besides the avalanche danger level, the avalanche problem is the 2nd part of the information pyramid
+of an avlanche bulletin \cite{mittererAusbildungshandbuchTirolerLawinenkommissionen2022}. Furthermore Avalanche problems
+contains information about the expected avalanche type, the distribution, and the location of the weak layer. 
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/figures_methods/avaprobs.png}
+    \caption{The five avalanche problems agreed by the EAWS: New snow, Wind slab,Persitent weak layer, Wet snow, Gliding snow}
+    \label{fig:avaprobs}
+\end{figure*}
 
 % ==== Avalanche Problems ===============================================================
-\subsection{Avalanche Problems}
+\subsubsection{New snow}
+
+The \textit{New snow}- problem is related to current or most recent snowfall.
+Snowfall stand alone does not go hand in hand with a \textit{New snow} problem.
+The snowpack has to fullfill curtain critiarias as for example exceeding a critical ammount of snow. 
+How critical the loading is depends on various factors such as temperature or characteristics of the old snow surface. 
+\cite{mittererAusbildungshandbuchTirolerLawinenkommissionen2022} \\
+
+\noindent In the scope of the \textit{New snow} problem there may accore dry-slab avalanches due to additional load on a old or newly 
+build weak layer, or dry-loose snow avalanches in steep terrain due to unsuficient coherence of the snow cristals. 
+\\
+\noindent The advantage of the \textit{New snow} problem is that it is relativly easy to identivy in the terrain and 
+furthermore it is often only relevant during the snowfall and a few days on. Is the most recent snowfall influenced 
+by wind it is often combindend with an \textit{Wind Slab}  problem.\cite{mittererAusbildungshandbuchTirolerLawinenkommissionen2022}
+
+
+\subsubsection{Wind slab}
+
+Wind, to be precise the transported snow the wind plays the key factor. Snow can be carryied during as well as after the snowfall event. 
+
+\noindent The \textit{Wind slab} problem is build if transported snow, building coherent slabs, overlaying weaklayers leading to dry-slab 
+avalanches. \textit{Wind slab} can evolve quickly even during the snowfall event. 
+Depending on the snowpack evolution and the type of the burried grains (e.g. for loose snow, graupel,...) 
+the problem persits from a few days up to months (eg. faceted crystals, surface hoar) converting into persitent problem.
+
+\subsubsection{Persistent weak layers}
+
+The persitent weak layer problem is characterised by a long persitent layer mainly consiting out of faceted crystals
+(Faceted crystals, surface hoar, deph hoar) burried by a critical amount of new snow.
+
+Persistend weak layer problems can be spreat over all aspects but persits longer espacially in shaded areas. It is a
+insidious prblem and hard to identivy. Only observed snowpit can help to find them. Espected avalanche types a dry-slab avalanches
+
+
+\subsubsection{Wet snow}
+
+The Wet snow problem is due to the increasing liquide water content in the snowpack leading to a loss of stability.
+The increas of the LWC can be due to radiation, liquid presipitation or and increase of temperature. As soon as the LWC 
+reaches a critical threshold the stability decreases as long as it reaches stability again after wet-snow-methamorphism
+
+The expected avalanche types ar wet slab and wet loose snow avalanches.
+
+\subsubsection{Gliding snow}
+
+The Gliding snow problem is assciated with a completly gliding of the entire snowpack on the ground. The are hardly 
+predictable but  gliding moth anounce might annoucne the problem.
 
 
 % ==== Avalnche Problem Algorithm ===============================================================
-\subsection{Avalnche Problem Algorithm}
+\section{Avalanche Problem Algorithm}
 
- %\begin{figure*}[tbp]
-%     \centering
-%     \includegraphics[width=0.99\textwidth]{figures_methods/waveletAna_power_spectrum.png}
-%     \caption{}
-%     \label{fig:wavelet_example}
-% \end{figure*}
+\subsection{Concept}
+
+- Detection/ Tracking\\
+- overall deccion tree\\
+-Slab \\
+-stability critiarias\\
+-avalnche problems
+
+
+
+
+\subsection{New Snow}
+- new snow ammount \\
+- critical ammount \\
+- stability critiarias
+
+\subsection{Wind slab}
+
+
+\subsection{Persistent Weak layer}
+- burried FC 
+- coherent slab
+
+\subsection{Wet Snow Problem}
+%- LWC 
+%-isothermal
+The movement of water through the snowpack is complex and depending on the amount of water.
+Water is kept between and dominated by capillary forces at low liquide water content ($\theta_w$)(pendular regime).
+A further increasment of $\theta_w$ will lead to a gravitational flow (funicular regime). The transision regime
+depends on the graintype. Accordingly at a volumetric liquid water content $\theta_{w,v}$ of 3 \% water will drain and
+therefore reduce wet snow stability significantly.\autocite{mittererOperationalSupportingTool2013} 
+
+\noindent Mitterer et al. found out the importance of the arrival time of water at the bottom of the snowpack and therefore
+introduced the average liquide water content of the entire snowpack normalized by the starting value of transision 
+regime(\autocite{mittererOperationalSupportingTool2013}):
+
+ \begin{equation}
+    LWC_{index} = \frac{  \overline{ \theta}_{w,v }    } {0.03} 
+    \label{equ:LWC}
+ \end{equation}
+
+\noindent Where $\overline{ \theta}_{w,v }$ represents the modelled, avarage volumetric water content within the 
+entire snowpack. and $0.03$ the start of the regime transsion according to Conway and Reymond \autocite{conwaySnowStabilityRain1993}.
+Further more Mitterer et al. presented that the $LWC_{index}$ peformes quite welle to determin periods with high 
+wet-snow activity.\autocite{mittererOperationalSupportingTool2013} 
+
+\noindent Conway and Raymond \autocite{conwaySnowStabilityRain1993} defined three different periods for the wet snow
+instability:
+\begin{itemize}
+    \item increase of LWC towards 1, decrease of stability
+    \item timing of maximal instability ($LWC_{index}$ = 1)
+    \item Return to stability due to ongoing wet-snow meta-morphism ($LWC_{index}$ > 1 for more than 3 days)
+\end{itemize}
+
+\noindent The values for $\overline{ \theta}_{w,v }$ will be taken out of \textit{SNOWPACK} simulations for every layer
+for each day at defined wet-time period e.g. 15:00 UTC. Out of them the LWC will be calculated and the state of 
+isothermal state will be verified.
+
+\subsection{Gliding Snow Problem}
+
+- hard to predict \\
+- paper? 
+
+% ==== SNOWPACK ===============================================================
+\section{SNOWPACK- model-chains}
+
+\subsection {AWS}
+- chain description \\
+- input parameter\\
+
+
+\subsection {Observed profiles}
+- chain description\\
+- input data\\
+- initializing\\
+- Hand hardness parameterization\\
+- observed profiles\\
+- NWPs
+
+\subsubsection{Input parameters}
+
+\subsubsection{Hand hardness parameterization}

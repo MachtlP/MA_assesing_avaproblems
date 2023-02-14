@@ -1,27 +1,117 @@
 \chapter{Introduction}
 \label{sec:intro} 
 
+Modern avalanche forcasting services deliver a daily report on the prevailing avalanche hazard situation. 
+Up till now the assesment of the report is still mailny assest subjectevliy by experts knowledge based on 
+field observations, weather and snowpack models.
+
+Snowpack model as e.g SNOW
+- SNOWPACK models 
+- observations
+- clusters
+- NWPs
+- expert assesment
+
+Modern avalanche forcasting services 
+%%% ---- 
+\noindent Snowpack models as e.g. \textit{SNOWPACK} were developed more than 20 years ago but only recently they 
+are used in operational avalanche warning services. Snowpack models can be driven by Automated weather stations (AWS), 
+Numerical weather prediction data (NWP), initialized by observed profiles or a combination of them with the ultimate 
+goal to gain informations of the evolution of the layering within the snowpack.\autocite{lehningSnowpackModelCalculations1999} \\
+Avalanche forecasters are confronted with an overwhelming amount of information and either do not have the time or 
+the knowledge to interpret them. Therefore there is this big need to access this tremendous data- and information 
+treasure within the \textit{SNOWPACK} model more easily.
+\\
+\noindent At the time promising developments are ongoing to help avalanche warning services to tackle the 
+interpretation of this data amount. For example \autocite{perez-guillenDatadrivenAutomatedPredictions2022}  
+assigning automatically avalanche danger levels based on SNOWPACK simulations and machine-learning algorithms. 
+As well as \autocite{herlaDataExplorationTool2022} averaging thousands of simulated snow profiles to a single 
+one with dynamic-time-warping methods.
+
+\noindent In 2017 the EAWS (European avalanche warning services) agreed on the so called \textit{Avalanche Problems} 
+as entry point for the communication of the avalanche danger.\autocite{eawsTypicalAvalancheProblems2017} 
+The assessment of the \textit{Avalanche Problems} are mostly influenced by subjectivity of the forecaster. 
+Beside observed manual snow profiles and further field observations, snowpack simulations are taken into account 
+to evaluate the stability within the snow pit and the prevailing problems. Until now the interpretation of the data 
+is performed manually.
+
+\noindent A recently developed algorithm for analysing the avalanche problem climatology based on snow pack 
+simulations \autocite{reuterCharacterizingSnowInstability2022} will be adapted and applied on various snowpack model
+ chains to obtain an objective first guess, to support the avalanche forecaster in the assessment of the prevailing 
+ \textit{Avalanche Problems}. The automatically assegined problems will be compared to the assessment made by the 
+ forecaster.
+\\
+\noindent Modern avalanche forecasting provides a forecast of the hazard description with lead times up to 31 hours. 
+Still, the most direct information on snowpack stability is obtained with observed manual snow profiles and stability 
+tests. This type of information is combined and interpreted with information of Numerical Weather prediction models 
+(NWPs) by the forecaster. Therefore we want to investigate whether it is possible to initialize SNOWPACK by observed 
+profiles and drive them with NWP-data. Furthermore we intend to apply our developed algorithm for assessing avalanche 
+problems to the modeled snowpack to give the forecaster an objective first guess of an avalanche problem independent 
+of weather stations.
+
+\section{Clustering}
+\noindent Modern regional avalanche hazard assessment is based on several small \textit{micro-regions} 
+which are grouped during the process of the assessment in order to represent larger regions with similar 
+conditions. The pre-selections and definitions of those \textit{micro-regions} is crucial for a consistent
+ assessment and communication. Therefore we will investigate if modelled precipitation distribution combined 
+ with cluster analysis represent an useful approach to obtain these boundaries objectively. Further we will 
+ check whether the resulting outer lines of the clusters are sensitive to different prevailing flow direction 
+ of synoptic weather patterns. We will focus on the area of the so called \textit{EUREGIO}, in especially the 
+ Provinces of Tyrol, South Tyrol and Trentino.
+\\
+\\
+The pre-existing outer lines of Micro Regions within the \textit{EUREGIO} (Fig. \ref{Microregions}) are 
+suffering critic by local experts due to inconsistency of snow amount within a region and the prevailing 
+avalanche situation. Therefore it has to be investigated if the weather patterns based on solid precipitation 
+in winter months allow a better demarcation of the regions to gain an objective definition. The gained regions 
+should be compared if they are in line with the subjective expert assessment. 
+
+\begin{tcolorbox}[]
+    (R1.1) Is it possible to obtain \textit{micro-regions} for avalanche forecasting based on solid precipitation 
+    patterns (distribution) and are they in line with subjective expert assessment ? 
+\end{tcolorbox}
+
+\begin{tcolorbox}[]
+    (R1.2) How sensitive are the outer lines of the gained \textit{micro-regions} to the prevailing wind system? 
+\end{tcolorbox}
+
 %
-\section{Micro Regions}
-\label{subsec:MicroRegions}
+\section{Assessing avalanche problems - Model chains}
 
-\section{Avalanche Problems}
-
+\subsection{AWS-model chain - Now-cast}
+\textit{SNOWPACK} simulations contain an immense data treasure of the evolution of the layering within the snowpack 
+and their stability. Although being developed over two decades ago they are rarely used by operational avalanche 
+warning services due to its complexity and data amount. Therefore an algorithm for a direct assessment of a 
+prevailing avalanche problem should be applied to help the forecaster with an first objective guess.\\
+For the first steps an algorithm should be applied to the SNOWPACK-weather stations of the \textit{EUREGIO}. 
+These stations are already integrated in an operating model chain, delivering direct SNOWPACK-model output 
+with the evolution of the layering within the snowpack.
 
 \begin{tcolorbox}[]
-    (R1) Does regions with similar percipitation behavior have similar avalanche problems?
-    % long vertical wave lengths in vertical cross section and elongated phase line in horizontal
+    (R2.1) Is it possible to objectively assign avalanche problems based on SNOWPACK simulations driven by 
+    automated weather stations?
 \end{tcolorbox}
 
 \begin{tcolorbox}[]
-    (R2) Is it possible to assess avalanche problems based on Snowpack simulations?
+    (R2.2) Does the problem assignment based on snowpack simulations behave in a fairly similar way to the
+     assessment of the local avalanche forecasting service?
+\end{tcolorbox}
+
+\subsection{Observed Profiles and NWPs - Forecast } 
+
+Despite having a good favourable position in Tyrol, not all warning services have the situation of a good 
+coverage of weather stations across their forecasting area. Observed snow profiles are still the best tool to 
+gain a direct information on snow pack stability tests. It should be investigated if it is possible to 
+initialize \textit{SNOWPACK} by observed profiles and furthermore to drive it with the data receiving form NWPs. 
+This would enable the avalanche warning service to investigate snow stability prior critical situations e.g. a
+ big change of the weather pattern (as an upcoming weather front) and therefore close those data gaps. 
+ Furthermore it should be evaluated for how long simulations driven by NWPs behave in a fairly similar way 
+ than simulations driven by AWS. 
+
+\begin{tcolorbox}[]
+    (R3.1) Is it possible to assign avalanche problems based on snowpack simulations initialized by observed profiles and driven by NWPs?
 \end{tcolorbox}
 
 \begin{tcolorbox}[]
-    (R3) Do Snowpack simulations initialized by observed profiles and driven by NWPs 
-    show a consitence behaviour?
-    
+    (R3.2) How long are snowpack simulations and the assigned avalanche problems driven by NWPs in line with the simulations driven by AWS?
 \end{tcolorbox}
-
-
-
