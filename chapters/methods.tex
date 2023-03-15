@@ -14,14 +14,10 @@ communication. The so called \textit{EUREGIO}, in especially the provinces of Ti
 currently divied into 37 sup-regions. A single forecasting region covers at least a area of 10x10 km.
 The boundaries of these regions are typically along significant terrain signauters as mountain ridges or rivers.
 The initial state of the \textit{micro-regiosn} are based on expert knowledge and where further adaped on 
-expert feedback and further more on statitical analysis of meteorological data (Fig.: \ref{fig:EAWS_regions}).
+expert feedback and further more on statitical analysis of meteorological data (Fig.: \ref{fig:number_of_clusters}).
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Figures/figures_methods/Microregion.png}
-    \caption{Outerlines of the EUREGIO micro-regions}
-    \label{fig:EAWS_regions}
-\end{figure*}
+
+
 
 % ==== SNOWGRID ===============================================================
 \subsection{SNOWGRID}
@@ -48,7 +44,7 @@ Based on the 06:00:00MEZ datastamp a 24h surface hight change will be calulated.
 % ==== Cost733cat ===============================================================
 
 \subsection{Cost733cat - Weather and circulation type classification}
-
+\label{sec:wetterlagenkat}
 The Cost733cat is a databease of weather and circulation type classfication covering a spatial domain over Europe with 
 12 sup domains of the ZAMG. The inputdata comes from ERA40-reanalysis dataset provided by the Eruopian Center of Medium-Range
 Weather forecast by \textcite{philippCost733catDatabaseWeather2010}. The domain of intresst of this research is D06 covering
@@ -83,12 +79,45 @@ wind regimes within a day. For further statistical analyis it has to be taken in
 % ==== Clustering ===============================================================
 
 \subsection{Clustering}
-- kmeans
-- reshaping 3D into 1D
-- all wind regimes
--north blocking
-- number of clusters
 
+\noindent The analysis are bases on daily total snow height ($HS$) from the SNOWGRID database of the ZAMG over for the winterseasons
+for the area of the EUREGIO, from November 2011 till March 2021. Only days with a percipitation rate from at least 
+5mm comes into acount. The initial dataset is based on the INCA grid with a spatial resolution of 100x100m. In the scope of saving computing
+time the resolution is reduced to 1000x1000m to the median value of the higher grid. Based on the daily total snowheight
+the 24h snowheight change ($delta_{HS}$) is calculated.
+
+\noindent Based on the findings of the Cost733cat the snowgrid datasets are reduced to north blocking situations, south blocking situations 
+and all days. For each dataset a k-means algorithm is applied to achive regions with similar percipitation patterns.
+
+\subsubsection*{K-means Clustering}
+
+The k-means clustering method is used to generate groups of vectors $x_j$ with the scope of a small variances of the traget value
+within a group. The k-means method is often used to generate similar groups due to its relativly fast computation time. 
+On the downside the number of clusters $k$ must be predivend. For $x_j$ datapoints with the 
+
+\begin{equation}
+    J =  \parallel x_j -\mu_i \parallel ^{2}
+    \label{equ:cluster}
+ \end{equation}
+
+ To determin the optimal numbers $k$ of clusters the $ellbow-method$ is drawn by. To do so the sum of the square distance between the points in 
+ a cluster are calculated for increasing cluster number k. At the point where a increasing of clusters do not lead to a significantn 
+ change the theoretical optimum is reached.  
+
+ \begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/figures_methods/number_clusters.png}
+    \caption{nr}
+    \label{fig:number_of_clusters}
+\end{figure*}
+
+To apply the k-means algortihm to our \\
+- kmeans\\
+- reshaping 3D into 1D \\
+- all wind regimes \\
+-north blocking \\
+- number of clusters \\
+ 
 % ==== Assesing Avlanche Problems ===============================================================
 \section{Avalanche classification} 
 
@@ -98,17 +127,17 @@ Avalanches are as versatile as snow crystals and therefore different types can b
 as triggering mechanism, humidity, flow. The most prominant avlanche type critical for snow recrationist are slab avalanches
 
 
--Auslöse mechanismus
-- Lage der Gleitfläche
--feuchtigkeit
--from-bewegund
+-Auslöse mechanismus \\
+- Lage der Gleitfläche \\
+-feuchtigkeit \\
+-from-bewegund \\
 
-- dry / wet
+- dry / wet \\
 -slab - loose - gliding - wet snow
 
-- release mechanism
+- release mechanism \\
 
-- Lawinen --> Brett SCHW ininitianin
+- Lawinen --> Brett SCHW ininitianin\\
 
 
 
@@ -203,6 +232,7 @@ predictable but  gliding moth anounce might annoucne the problem.
 - coherent slab
 
 \subsection{Wet Snow Problem}
+\label{sec:methods_wetsnow}
 %- LWC 
 %-isothermal
 The movement of water through the snowpack is complex and depending on the amount of water.

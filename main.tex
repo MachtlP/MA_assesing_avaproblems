@@ -19,12 +19,13 @@
 
 %% do empty line for paragraph with indent and '\\' for new line without indent
 \usepackage{custompackage}
-
+\usepackage{amssymb}
 % --- Reference / Citation
 \usepackage[
-    backend=biber, % backend=biber,
-    style=apa, % apa, authoryear
+    %backend=biber, % backend=biber,
+    style=authoryear, % apa, authoryear
   ]{biblatex}
+
 \setlength\bibhang{12pt}
 \setlength\bibitemsep{6pt}
 \addbibresource{refs.bib}

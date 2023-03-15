@@ -25,11 +25,20 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{AWS}{section.2.4}% 25
 \BOOKMARK [2][-]{subsection.2.4.2}{Observed profiles}{section.2.4}% 26
 \BOOKMARK [0][-]{chapter.3}{SNOWGRID Clustering}{}% 27
-\BOOKMARK [0][-]{chapter.4}{Assesing Avalanche problems }{}% 28
-\BOOKMARK [1][-]{section.4.1}{Case Study}{chapter.4}% 29
-\BOOKMARK [2][-]{subsection.4.1.1}{Overview Winterseason 2021/22}{section.4.1}% 30
-\BOOKMARK [1][-]{section.4.2}{ vrgl stations nord /south hauptkamm}{chapter.4}% 31
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 32
-\BOOKMARK [0][-]{chapter.6}{Outlook}{}% 33
-\BOOKMARK [0][-]{appendix.A}{Large Quantities of Data}{}% 34
-\BOOKMARK [0][-]{appendix*.18}{Acknowledgments}{}% 35
+\BOOKMARK [1][-]{section.3.1}{Wind sector distribution}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.2}{K-means: Number of Clusters}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.3}{Clusters: Wind dependency}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.4}{New Micro Regions}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{Assesing Avalanche problems }{}% 32
+\BOOKMARK [1][-]{section.4.1}{Overview Winterseason 2021/22}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Axamer Lizum}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.2.1}{New Snow}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.2}{Persistent Weak layer}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.3}{Wet Snow}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.4}{Wind drift}{section.4.2}% 38
+\BOOKMARK [1][-]{section.4.3}{AWS vs observed Profile NWPs}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.4}{ vrgl stations nord /south hauptkamm}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 41
+\BOOKMARK [0][-]{chapter.6}{Outlook}{}% 42
+\BOOKMARK [0][-]{appendix.A}{Large Quantities of Data}{}% 43
+\BOOKMARK [0][-]{appendix*.27}{Acknowledgments}{}% 44
